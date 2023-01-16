@@ -12,7 +12,7 @@ export class AppComponent {
   number: boolean = false;
   symbol: boolean = false;
 
-  length:number=0;
+  length: number = 0;
   onchangeletter() {
     this.letter = !this.letter;
   }
@@ -25,31 +25,29 @@ export class AppComponent {
   looklength(lvalue: string) {
     this.length = parseInt(lvalue);
   }
-onclick(){ let generatedpassword=''
-  let letters="abcdefghijklmnopqrstuvwxyz";
-let numbers="0123456789";
-let symbols="!@#$%^&*()";
-let characters='';
-if(this.letter)
-{
-  characters+=letters;
+  onclick() {
+    let generatedpassword = ''
+    let letters = "abcdefghijklmnopqrstuvwxyz";
+    let numbers = "0123456789";
+    let symbols = "!@#$%^&*()";
+    let characters = '';
+    if (this.letter) {
+      characters += letters;
 
-}
-if(this.number)
-{
-  characters+=numbers;
-  
-}
-if(this.symbol)
-{
-  characters+=symbols;
-  
-}
-for(let i=0;i<this.length;i++){
-  let index=Math.floor(Math.random()*(characters.length));
-generatedpassword+=characters[index];
-}
-this.password=generatedpassword;
-}
+    }
+    if (this.number) {
+      characters += numbers;
+
+    }
+    if (this.symbol) {
+      characters += symbols;
+
+    }
+    for (let i = 0; i < this.length; i++) {
+      let index = Math.floor(Math.random() * (characters.length));
+      generatedpassword += characters[index];
+    }
+    this.password = generatedpassword;
+  }
 
 }
