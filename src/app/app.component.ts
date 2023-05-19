@@ -30,6 +30,7 @@ onclick(){ let generatedpassword=''
 let numbers="0123456789";
 let symbols="!@#$%^&*()";
 let characters='';
+console.log(this.letter)
 if(this.letter)
 {
   characters+=letters;

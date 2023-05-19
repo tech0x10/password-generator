@@ -17,7 +17,7 @@
             <div class="field">
                 <div class="control">
                     <label class="checkbox">
-                        <input (change)="onchangeletter()" type="checkbox" />
+                        <input (change)="onchangenumber()" type="checkbox" />
                         Use Numbers
                     </label>
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <button (click)="onclick()" 
-            [disabled]="true"
+            [disabled]="!(letter||symbol||number)"
             class="button is-link is-fullwidth">
                 Generate!
             </button>
